@@ -6,10 +6,10 @@ class Application
 
     time = Time.now.to_s
 
-    if time >= "12:00:00"
-      resp.write "Good Afternoon!"
-    elsif time < "12:00:00"
+    if time < "12:00:00"
       resp.write "Good Morning!"
+    elsif time >= "12:00:00"
+      resp.write "Good Afternoon!"
     end
 
     resp.finish
